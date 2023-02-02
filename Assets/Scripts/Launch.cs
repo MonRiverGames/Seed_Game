@@ -80,7 +80,7 @@ public class Launch : MonoBehaviour
                 seedRb.simulated = true;
 
                 // Launch
-                float yValue = verticalBar.value/verticalBar.maxValue;
+                float yValue = verticalBar.value / verticalBar.maxValue;
                 seedRb.AddForce(new Vector2(powerBar.value * (1 - yValue) * 0.8f, powerBar.value * yValue * 0.5f), ForceMode2D.Impulse);
 
                 // Disable bar UI
@@ -89,14 +89,32 @@ public class Launch : MonoBehaviour
             }
         }
 
-        if(hasLaunched && !hasLanded && seedRb.velocity.x <= 0 && seedRb.velocity.y <= 0 )
+        if (hasLaunched && !hasLanded && seedRb.velocity.x <= 0 && seedRb.velocity.y <= 0)
         {
             posAfterLaunch = seed.transform.position.x;
-            Debug.Log(posAfterLaunch);
-            int distance = (int) (posAfterLaunch - posBeforeLaunch);
-            Debug.Log(distance);
+            int distance = (int)(posAfterLaunch - posBeforeLaunch);
             DistanceTxt.text = "Distance: " + distance.ToString();
+            GetGroundType();
             hasLanded = true;
+            
         }
+    }
+    public void GetGroundType()
+    {
+        Collider2D[] landsOn = Physics2D.OverlapCircleAll(seed.transform.position, (float) 0.75);
+
+        foreach(Collider2D collider in landsOn)
+        {
+            if(collider.tag == "FertileGround")
+            {
+                Debug.Log("You Landed on Fertile Ground!!!");
+            }
+            if (collider.tag == "SparseGround")
+            {
+                Debug.Log("You Landed on Sparse Ground!!!");
+            }
+
+        }
+
     }
 }
