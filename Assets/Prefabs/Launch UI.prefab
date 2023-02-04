@@ -610,6 +610,7 @@ MonoBehaviour:
   powerBar: {fileID: 3323910233565086091}
   verticalBar: {fileID: 3323910234286890518}
   DistanceTxt: {fileID: 0}
+  WindSpeedTxt: {fileID: 0}
   seed: {fileID: 0}
   seedRb: {fileID: 0}
 --- !u!1 &3323910234120326662

@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 75297c7fa750d924fb84be58ec6fa2c2, type: 3}
+  m_Color: {r: 1, g: 0.6839622, b: 0.11372549, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -116,7 +116,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 2
+  m_LinearDrag: 1.5
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 5a42dab8016f77d439a2ec65c70cac18, type: 2}
@@ -139,5 +139,6 @@ MonoBehaviour:
   powerBar: {fileID: 0}
   verticalBar: {fileID: 0}
   DistanceTxt: {fileID: 0}
+  WindSpeedTxt: {fileID: 0}
   seed: {fileID: 627597279057807436}
   seedRb: {fileID: 627597279057807432}

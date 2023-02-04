@@ -10,11 +10,14 @@ public class Launch : MonoBehaviour
     [SerializeField] Slider verticalBar;
     bool hasLaunched = false;
     bool hasLanded = false;
-    public TextMeshProUGUI DistanceTxt;
+    [SerializeField] TextMeshProUGUI DistanceTxt;
+    [SerializeField] TextMeshProUGUI WindSpeedTxt;
     private float posBeforeLaunch;
     private float posAfterLaunch;
+    private int WindSpeed;
     [SerializeField] GameObject seed;
     [SerializeField] Rigidbody2D seedRb;
+    private WinAndLose winAndLose;
 
     void Awake()
     {
@@ -30,14 +33,17 @@ public class Launch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        posBeforeLaunch = seed.transform.position.x;
-        posAfterLaunch = 0;
         seed = GameObject.Find("Seed");
         seedRb = seed.GetComponent<Rigidbody2D>();
+        winAndLose = GameObject.Find("GameManager").GetComponent<WinAndLose>();
+        posBeforeLaunch = seed.transform.position.x;
+        posAfterLaunch = 0;
         powerBar.value = 0;
         powerBar.maxValue = 100;
         verticalBar.value = 0;
         verticalBar.maxValue = 100;
+        WindSpeed = Random.Range(0, 10);
+        WindSpeedTxt.text = "Wind Speed: " + WindSpeed.ToString() + " MPH";
     }
 
     // Update is called once per frame
@@ -73,7 +79,7 @@ public class Launch : MonoBehaviour
 
         if (powerBar.value > 0)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && !hasLaunched)
             {
                 // Make gravity applied
                 hasLaunched = true;
@@ -81,7 +87,7 @@ public class Launch : MonoBehaviour
 
                 // Launch
                 float yValue = verticalBar.value / verticalBar.maxValue;
-                seedRb.AddForce(new Vector2(powerBar.value * (1 - yValue) * 0.8f, powerBar.value * yValue * 0.5f), ForceMode2D.Impulse);
+                seedRb.AddForce(new Vector2(powerBar.value * (1 - yValue) * 1.1f, powerBar.value * yValue * 0.8f), ForceMode2D.Impulse);
 
                 // Disable bar UI
                 powerBar.gameObject.SetActive(false);
@@ -108,10 +114,12 @@ public class Launch : MonoBehaviour
             if(collider.tag == "FertileGround")
             {
                 Debug.Log("You Landed on Fertile Ground!!!");
+                winAndLose.Win();
             }
             if (collider.tag == "SparseGround")
             {
                 Debug.Log("You Landed on Sparse Ground!!!");
+                winAndLose.Lose();
             }
 
         }
