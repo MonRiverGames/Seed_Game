@@ -14,6 +14,7 @@ public class Launch : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI DistanceTxt;
     [SerializeField] TextMeshProUGUI WindSpeedTxt;
+    GameObject LaunchTxt;
 
     private float posBeforeLaunch;
     private float posAfterLaunch;
@@ -45,6 +46,7 @@ public class Launch : MonoBehaviour
         seed = GameObject.Find("Seed");
         seedRb = seed.GetComponent<Rigidbody2D>();
         winAndLose = GameObject.Find("GameManager").GetComponent<WinAndLose>();
+        LaunchTxt = GameObject.Find("LaunchTxt");
         posBeforeLaunch = seed.transform.position.x;
         posAfterLaunch = 0;
         powerBar.value = 0;
@@ -100,8 +102,10 @@ public class Launch : MonoBehaviour
                 SeedLaunch.Play();
 
                 // Disable bar UI
+                LaunchTxt.gameObject.SetActive(false);
                 powerBar.gameObject.SetActive(false);
                 verticalBar.gameObject.SetActive(false);
+                
             }
         }
 

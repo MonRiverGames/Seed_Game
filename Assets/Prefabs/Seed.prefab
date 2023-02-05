@@ -142,6 +142,7 @@ MonoBehaviour:
   verticalBar: {fileID: 0}
   DistanceTxt: {fileID: 0}
   WindSpeedTxt: {fileID: 0}
+  LaunchTxt: {fileID: 0}
   SeedLaunch: {fileID: 1262042199246124297}
   SeedThud: {fileID: 1302196434140114034}
   seed: {fileID: 627597279057807436}
