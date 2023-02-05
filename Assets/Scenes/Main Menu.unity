@@ -981,7 +981,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Appalachian Seed-a-Pault!
+  m_text: Appalachian Seed-a-Pault
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e3506c1a127f7bb4c9fa9ec739440ea9, type: 2}
   m_sharedMaterial: {fileID: -508666614056909121, guid: e3506c1a127f7bb4c9fa9ec739440ea9, type: 2}
