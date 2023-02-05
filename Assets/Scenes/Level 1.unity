@@ -1098,10 +1098,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5648049555324775368, guid: 7ed16a8492dccc545a1e1eeb3c4ae04b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8935431611311708615, guid: 7ed16a8492dccc545a1e1eeb3c4ae04b, type: 3}
       propertyPath: m_Name
       value: MenuCanvas
@@ -1182,10 +1178,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6646722774870749064, guid: bed66eb354d4df14eb231ea59cb051ee, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 358
-      objectReference: {fileID: 0}
     - target: {fileID: 6805348975018655443, guid: bed66eb354d4df14eb231ea59cb051ee, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1273,14 +1265,6 @@ PrefabInstance:
     - target: {fileID: 6805348975018655455, guid: bed66eb354d4df14eb231ea59cb051ee, type: 3}
       propertyPath: m_Name
       value: PlayerUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 6805348975020570264, guid: bed66eb354d4df14eb231ea59cb051ee, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 195.84499
-      objectReference: {fileID: 0}
-    - target: {fileID: 6805348975806120094, guid: bed66eb354d4df14eb231ea59cb051ee, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bed66eb354d4df14eb231ea59cb051ee, type: 3}

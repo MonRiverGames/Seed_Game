@@ -15,6 +15,8 @@ public class Launch : MonoBehaviour
     private float posBeforeLaunch;
     private float posAfterLaunch;
     private int WindSpeed;
+    public AudioSource SeedLaunch;
+    public AudioSource SeedThud;
     [SerializeField] GameObject seed;
     [SerializeField] Rigidbody2D seedRb;
     private WinAndLose winAndLose;
@@ -88,6 +90,7 @@ public class Launch : MonoBehaviour
                 // Launch
                 float yValue = verticalBar.value / verticalBar.maxValue;
                 seedRb.AddForce(new Vector2(powerBar.value * (1 - yValue) * 1.1f, powerBar.value * yValue * 0.8f), ForceMode2D.Impulse);
+                SeedLaunch.Play();
 
                 // Disable bar UI
                 powerBar.gameObject.SetActive(false);
@@ -95,8 +98,9 @@ public class Launch : MonoBehaviour
             }
         }
 
-        if (hasLaunched && !hasLanded && seedRb.velocity.x <= 0 && seedRb.velocity.y <= 0)
+        if (hasLaunched && !hasLanded && seedRb.velocity.x <= 0.3 && seedRb.velocity.y <= 0.3)
         {
+            SeedThud.Play();
             posAfterLaunch = seed.transform.position.x;
             int distance = (int)(posAfterLaunch - posBeforeLaunch);
             DistanceTxt.text = "Distance: " + distance.ToString();
