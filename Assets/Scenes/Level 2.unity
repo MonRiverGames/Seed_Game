@@ -1536,9 +1536,25 @@ PrefabInstance:
       propertyPath: WindSpeedTxt
       value: 
       objectReference: {fileID: 1269479893}
+    - target: {fileID: 627597279057807434, guid: 492945ee593effe4bb8924b174a569ab, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dc4eeddcca958224790da2925092db44, type: 3}
     - target: {fileID: 627597279057807435, guid: 492945ee593effe4bb8924b174a569ab, type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 627597279057807435, guid: 492945ee593effe4bb8924b174a569ab, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6971428
+      objectReference: {fileID: 0}
+    - target: {fileID: 627597279057807435, guid: 492945ee593effe4bb8924b174a569ab, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6971428
+      objectReference: {fileID: 0}
+    - target: {fileID: 627597279057807435, guid: 492945ee593effe4bb8924b174a569ab, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6971428
       objectReference: {fileID: 0}
     - target: {fileID: 627597279057807435, guid: 492945ee593effe4bb8924b174a569ab, type: 3}
       propertyPath: m_LocalPosition.x
