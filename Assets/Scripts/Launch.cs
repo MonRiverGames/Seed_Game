@@ -8,17 +8,23 @@ public class Launch : MonoBehaviour
 {
     [SerializeField] Slider powerBar;
     [SerializeField] Slider verticalBar;
+
     bool hasLaunched = false;
     bool hasLanded = false;
+
     [SerializeField] TextMeshProUGUI DistanceTxt;
     [SerializeField] TextMeshProUGUI WindSpeedTxt;
+
     private float posBeforeLaunch;
     private float posAfterLaunch;
     private int WindSpeed;
+
     public AudioSource SeedLaunch;
     public AudioSource SeedThud;
+
     [SerializeField] GameObject seed;
     [SerializeField] Rigidbody2D seedRb;
+
     private WinAndLose winAndLose;
     public GameObject GrownPlant;
 
@@ -99,17 +105,24 @@ public class Launch : MonoBehaviour
             }
         }
 
+        // If seed has landed
         if (hasLaunched && !hasLanded && seedRb.velocity.x <= 0.3 && seedRb.velocity.y <= 0.3)
         {
+            // play sound
             SeedThud.Play();
+
+            // Get Distance
             posAfterLaunch = seed.transform.position.x;
             int distance = (int)(posAfterLaunch - posBeforeLaunch);
             DistanceTxt.text = "Distance: " + distance.ToString();
+
             GetGroundType();
             hasLanded = true;
             
         }
     }
+
+    // Determines wether seed has landed on fertile or infertile Ground
     public void GetGroundType()
     {
         Collider2D[] landsOn = Physics2D.OverlapCircleAll(seed.transform.position, (float) 0.75);
@@ -131,6 +144,7 @@ public class Launch : MonoBehaviour
         }
     }
 
+    // Grows plant if on fertile ground
     public void GrowPlant()
     {
         seed.gameObject.SetActive(false);

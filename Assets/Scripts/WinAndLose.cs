@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WinAndLose : MonoBehaviour
+public class WinAndLose : MonoBehaviour // Plays sound and activates appropriate UI on Win or Lose
 {
     public AudioSource WinSound;
     public AudioSource LoseSound;
