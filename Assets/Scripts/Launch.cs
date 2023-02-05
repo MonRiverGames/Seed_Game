@@ -20,6 +20,7 @@ public class Launch : MonoBehaviour
     [SerializeField] GameObject seed;
     [SerializeField] Rigidbody2D seedRb;
     private WinAndLose winAndLose;
+    public GameObject GrownPlant;
 
     void Awake()
     {
@@ -118,6 +119,7 @@ public class Launch : MonoBehaviour
             if(collider.tag == "FertileGround")
             {
                 Debug.Log("You Landed on Fertile Ground!!!");
+                GrowPlant();
                 winAndLose.Win();
             }
             if (collider.tag == "SparseGround")
@@ -127,6 +129,12 @@ public class Launch : MonoBehaviour
             }
 
         }
+    }
 
+    public void GrowPlant()
+    {
+        seed.gameObject.SetActive(false);
+        GrownPlant.transform.position = seed.transform.position;
+        GrownPlant.SetActive(true);
     }
 }

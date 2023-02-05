@@ -611,8 +611,11 @@ MonoBehaviour:
   verticalBar: {fileID: 3323910234286890518}
   DistanceTxt: {fileID: 0}
   WindSpeedTxt: {fileID: 0}
+  SeedLaunch: {fileID: 0}
+  SeedThud: {fileID: 0}
   seed: {fileID: 0}
   seedRb: {fileID: 0}
+  GrownPlant: {fileID: 0}
 --- !u!1 &3323910234120326662
 GameObject:
   m_ObjectHideFlags: 0

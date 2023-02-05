@@ -146,6 +146,7 @@ MonoBehaviour:
   SeedThud: {fileID: 1302196434140114034}
   seed: {fileID: 627597279057807436}
   seedRb: {fileID: 627597279057807432}
+  GrownPlant: {fileID: 0}
 --- !u!82 &1262042199246124297
 AudioSource:
   m_ObjectHideFlags: 0
