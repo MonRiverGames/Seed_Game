@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 176994094}
+  - component: {fileID: 176994095}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -163,6 +164,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!182 &176994095
+WindZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176994093}
+  m_Enabled: 1
+  m_Mode: 0
+  m_Radius: 20
+  m_WindMain: 1
+  m_WindTurbulence: 1
+  m_WindPulseMagnitude: 0.5
+  m_WindPulseFrequency: 0.01
 --- !u!1 &419915822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,6 +1254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUI
       objectReference: {fileID: 0}
+    - target: {fileID: 6805348975020570265, guid: bed66eb354d4df14eb231ea59cb051ee, type: 3}
+      propertyPath: m_text
+      value: 'Distance: 0 ft'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bed66eb354d4df14eb231ea59cb051ee, type: 3}
 --- !u!114 &1269479892 stripped
@@ -1425,6 +1444,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3323910234120326663, guid: e0998bc3808d2fb4794b833ec0e23be0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323910234343730459, guid: e0998bc3808d2fb4794b833ec0e23be0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323910235095337904, guid: e0998bc3808d2fb4794b833ec0e23be0, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

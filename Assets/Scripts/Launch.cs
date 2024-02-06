@@ -115,15 +115,14 @@ public class Launch : MonoBehaviour
             // play sound
             SeedThud.Play();
 
-            // Get Distance
-            posAfterLaunch = seed.transform.position.x;
-            int distance = (int)(posAfterLaunch - posBeforeLaunch);
-            DistanceTxt.text = "Distance: " + distance.ToString();
-
             GetGroundType();
             hasLanded = true;
             
         }
+
+        posAfterLaunch = seed.transform.position.x;
+        int distance = (int)(posAfterLaunch - posBeforeLaunch);
+        DistanceTxt.text = "Distance: " + distance.ToString() + " ft";
     }
 
     // Determines wether seed has landed on fertile or infertile Ground
