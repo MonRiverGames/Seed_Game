@@ -109,6 +109,8 @@ public class Launch : MonoBehaviour
             }
         }
 
+
+        // Lines 113 and Below created by Zachary Hubbard as part of collision implementation
         // If seed has landed
         if (hasLaunched && !hasLanded && seedRb.velocity.x <= 0.3 && seedRb.velocity.y <= 0.3)
         {
@@ -125,21 +127,24 @@ public class Launch : MonoBehaviour
         DistanceTxt.text = "Distance: " + distance.ToString() + " ft";
     }
 
+    // Function Created by Zachary Hubbard
     // Determines wether seed has landed on fertile or infertile Ground
-    public void GetGroundType()
-    {
-        Collider2D[] landsOn = Physics2D.OverlapCircleAll(seed.transform.position, (float) 0.75);
+    public void GetGroundType() 
+    {   // Gets a list of all colliders in radius of seed a
+        Collider2D[] landsOn = Physics2D.OverlapCircleAll(seed.transform.position, (float) 0.75); 
 
-        foreach(Collider2D collider in landsOn)
+        foreach(Collider2D collider in landsOn) // Go through each collider
         {
-            if(collider.tag == "FertileGround")
+            if(collider.tag == "FertileGround") // if an object with a collider (the ground object) has the fertile tag
             {
+                // Grow the plant and trigger a level win
                 Debug.Log("You Landed on Fertile Ground!!!");
                 GrowPlant();
                 winAndLose.Win();
             }
-            if (collider.tag == "SparseGround")
+            if (collider.tag == "SparseGround") // if an object with a collider (the ground object) has the sparse tag
             {
+                // Do not grow the plant and trigger a level loss
                 Debug.Log("You Landed on Sparse Ground!!!");
                 winAndLose.Lose();
             }
@@ -147,6 +152,7 @@ public class Launch : MonoBehaviour
         }
     }
 
+    // Function Created by Zachary Hubbard, Sets the seed sprite to that of the grown plant if landing on fertile ground
     // Grows plant if on fertile ground
     public void GrowPlant()
     {
