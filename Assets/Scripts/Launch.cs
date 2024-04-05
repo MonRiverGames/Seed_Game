@@ -9,10 +9,10 @@ public class Launch : MonoBehaviour
     // Variables on lines 10 - 13 implemented by Tessla Muir
     [SerializeField] Slider powerBar;
     [SerializeField] Slider verticalBar;
-    bool hasLaunched = false;
+     bool hasLaunched = false;
 
     // Variables on lines 16 - 29 implemented by Zachary Hubbard
-     bool hasLanded = false;
+    private bool hasLanded = false;
     private float posBeforeLaunch;
     private float posAfterLaunch;
     private int WindSpeed;
