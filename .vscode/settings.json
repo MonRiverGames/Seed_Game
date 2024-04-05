@@ -55,5 +55,8 @@
     "files.associations": {
         "plyconfig.json": "jsonc"
     },
-    "dotnet.preferCSharpExtension": true
+    "dotnet.preferCSharpExtension": true,
+    "cSpell.words": [
+        "Rigidbody"
+    ]
 }
