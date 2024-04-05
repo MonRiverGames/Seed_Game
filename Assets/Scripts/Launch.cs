@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-// Launch.cs - Handles Seed Launch and Collision 
-// Worked on by Zachary Hubbard and Tessla Muir and contributions are cited as such.
+/* Launch.cs - Handles Seed Launch, Collision Detection, and Plant Growth
+Implemented  by both Zachary Hubbard and Tessla Muir as part of Appalachian Seed-A-Pult for 2023 Global Game Jam.
+Individual Contribution have been citied according using comments. */
 public class Launch : MonoBehaviour
 {
     // Variables on lines 10 - 13 implemented by Tessla Muir
